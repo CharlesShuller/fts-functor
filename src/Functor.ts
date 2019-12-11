@@ -30,6 +30,9 @@ export interface FmapFunction<Vi, Vo> {
 /**
  * A Functor is a type which can be mapped over.  More specifically, any
  * type which implements fmap.
+ *
+ * Implementations of fmap MUST return a NEW functor, and
+ * NOT modify state in the original.
  */
 export interface Functor<V> {
     fmap<Vo>( fmapFunction: FmapFunction<V, Vo> ): Functor<Vo>;
