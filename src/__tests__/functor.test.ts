@@ -56,3 +56,11 @@ test("Fmap can be called returning a different functor type", () => {
 
     expect(tc.value).toBe(12);
 });
+
+
+test("Fmap can be called returning a different functor type with multiple variables", () => {
+    const stringTc = new TestContainer<string>("12");
+    const numberTc = stringTc.fmap( (value: string) => Number.parseInt(value) );
+
+    expect(numberTc.value).toBe(12);
+});
