@@ -1,6 +1,6 @@
 {
     "name": "fts-functor",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Functor interface for functional constructs in typescript",
     "main": "lib/Functor.js",
     "types": "lib/Functor.d.ts",
